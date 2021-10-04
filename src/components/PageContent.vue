@@ -10,18 +10,27 @@
                 <Industries />
             </div>
             <div class='column column-75'>
-                <IndustryContent />
+                <IndustryContent v-if="selectedIndustryId != -1"/>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import { computed } from 'vue'
+import { useStore } from 'vuex'
 import TitleHeader from './TitleHeader.vue'
 import Industries from './Industries.vue'
 import IndustryContent from './IndustryContent.vue'
 
 export default {
+    setup() {
+        const store = useStore()
+
+        return {
+            selectedIndustryId: computed(() => store.state.selectedIndustryId)
+        }
+    },
     components: {
         TitleHeader,
         Industries,

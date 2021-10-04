@@ -1,13 +1,30 @@
 <template>
     <div class='tab-content card card-light'>
-        <div class='row row-title'>
+        <div class='row row-title row-producer'>
             <div class='column background-accent rounded-top'>
                 <h2>{{ industry.name }}</h2>
             </div>
         </div>
         <div class='row row-body'>
-            <div class='column'>
-                some content here
+            <div class='column column-producer'>
+                <ProducerCard />
+            </div>
+            <div class='column column-producer'>
+                <ProducerCard />
+            </div>
+            <div class='column column-producer'>
+                <ProducerCard />
+            </div>
+        </div>
+        <div class='row row-body'>
+            <div class='column column-producer'>
+                <ProducerCard />
+            </div>
+            <div class='column column-producer'>
+                <ProducerCard />
+            </div>
+            <div class='column column-producer'>
+                <ProducerCard />
             </div>
         </div>
     </div>
@@ -18,6 +35,8 @@ import { computed } from 'vue'
 import { useStore } from 'vuex'
 import { getIndustry } from '/src/util/storeUtil.js'
 
+import ProducerCard from './ProducerCard.vue'
+
 export default {
     setup() {
         const store = useStore()
@@ -26,6 +45,9 @@ export default {
             industryId: computed(() => store.state.selectedIndustryId),
             industry: computed(() => getIndustry(store.state.selectedIndustryId))
         }
+    },
+    components: {
+        ProducerCard
     }
 }
 </script>
