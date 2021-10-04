@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
+
+/* ---- Defining variables and general/global properties ---- */
+:root {
+    --background-color-primary: #343C4A;
+    --background-color-secondary: #232A35;
+    --accent-color: #30C78D;
+    --text-color: #F5F5F5;
+}
+
+#app {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    user-select: none;
+    background-color: var(--background-color-secondary);
+    width: 100vw;
+    height: 100vh;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+}
+
+/* ---- General classes for coloring backgrounds ---- */
+.dark-background-primary {
+    background-color: var(--background-color-primary);
+    color: var(--text-color);
+}
+
+.dark-background-secondary {
+    background-color: var(--background-color-secondary);
+    color: var(--text-color);
+}
+
+.accent-background {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+/* ---- Button classes ---- */
+.button-accent {
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.button-outline.button-accent {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+/* ---- Other general classes ---- */
+.rounded {
+    border-radius: 1rem;
+}
+
+.rounded-top {
+    border-radius: 1rem 1rem 0rem 0rem;
+}
