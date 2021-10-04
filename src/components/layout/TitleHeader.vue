@@ -1,5 +1,5 @@
 <template>
-    <div class='header dark-background-primary rounded'>
+    <div class='header card card-light'>
         <div class='row'>
             <div class='column column-50'>
                 <h1>{{ title }}</h1>

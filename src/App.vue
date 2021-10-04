@@ -1,16 +1,16 @@
 <template>
     <div class='container'>
-        <MainPage />
+        <PageContent />
     </div>
 </template>
 
 <script>
-import MainPage from './components/layout/MainPage.vue'
+import PageContent from './components/layout/PageContent.vue'
 
 export default {
     name: 'App',
     components: {
-        MainPage
+        PageContent
     }
 }
 </script>

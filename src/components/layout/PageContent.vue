@@ -1,31 +1,31 @@
 <template>
-    <div class='main-page dark-background-secondary'>
-        <div class='row row-header rounded'>
+    <div class='main-page'>
+        <div class='row row-header'>
             <div class='column column-100'>
-                <Header title='Incremental Mining' />
+                <TitleHeader title='Incremental Mining' />
             </div>
         </div>
         <div class='row row-content'>
             <div class='column column-25 column-sidebar'>
-                <SideBar />
+                <Industries />
             </div>
             <div class='column column-75'>
-                <TabContent title='Test Title'/>
+                <IndustryContent />
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import Header from './Header.vue'
-import SideBar from './SideBar.vue'
-import TabContent from './TabContent.vue'
+import TitleHeader from './TitleHeader.vue'
+import Industries from './Industries.vue'
+import IndustryContent from './IndustryContent.vue'
 
 export default {
     components: {
-        Header,
-        SideBar,
-        TabContent
+        TitleHeader,
+        Industries,
+        IndustryContent
     }
 }
 </script>

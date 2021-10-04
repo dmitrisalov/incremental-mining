@@ -1,8 +1,8 @@
 <template>
-    <div class='tab-content dark-background-primary rounded'>
+    <div class='tab-content card card-light'>
         <div class='row row-title'>
-            <div class='column accent-background rounded-top'>
-                <h2>{{ title }}</h2>
+            <div class='column background-accent rounded-top'>
+                <h2>{{ industry.name }}</h2>
             </div>
         </div>
         <div class='row row-body'>
@@ -14,10 +14,19 @@
 </template>
 
 <script>
+import { computed } from 'vue'
+import { useStore } from 'vuex'
+import { getIndustry } from '/src/util/storeUtil.js'
+
 export default {
-    props: [
-        'title'
-    ]
+    setup() {
+        const store = useStore()
+
+        return {
+            industryId: computed(() => store.state.selectedIndustryId),
+            industry: computed(() => getIndustry(store.state.selectedIndustryId))
+        }
+    }
 }
 </script>
 

@@ -23,17 +23,17 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 /* ---- General classes for coloring backgrounds ---- */
-.dark-background-primary {
+.background-dark-primary {
     background-color: var(--background-color-primary);
     color: var(--text-color);
 }
 
-.dark-background-secondary {
+.background-dark-secondary {
     background-color: var(--background-color-secondary);
     color: var(--text-color);
 }
 
-.accent-background {
+.background-accent {
     background-color: var(--accent-color);
     color: var(--text-color);
 }
@@ -50,11 +50,21 @@ p, h1, h2, h3, h4, h5, h6 {
     color: var(--accent-color);
 }
 
-/* ---- Other general classes ---- */
-.rounded {
-    border-radius: 1rem;
+/* ---- Card classes ---- */
+.card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
 }
 
+.card.card-light {
+    background-color: var(--background-color-primary);
+}
+
+.card.card-dark {
+    background-color: var(--background-color-secondary);
+}
+
+/* ---- Other general classes ---- */
 .rounded-top {
-    border-radius: 1rem 1rem 0rem 0rem;
+    border-radius: 5px 5px 0px 0px;
 }
